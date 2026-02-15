@@ -1,0 +1,68 @@
+//https://getbootstrap.com/docs/5.0/customize/sass/
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// 2. YOUR VARIABLES (Must come BEFORE variables.scss)
+$primary: #30364f;
+$secondary: #acbac4;
+$warning: #e1d9bc;
+$light: #f0f0db;
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// CUSTOM NORMAL CSS
+.mainMobileContent {
+  display: none;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+.sizeMessage {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+}
+.landingPhoto {
+  width: 100%;
+  height: 400px;
+  background: url("Images/LandingPhoto.jpeg") no-repeat center center;
+  background-size: cover;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h1 {
+  background-color: white;
+}
+
+.card {
+  width: 100%;
+  height: 470px;
+}
+
+.carousel,
+.carousel-inner {
+  width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* We set the max width to 450px since most mobile devices are smaller than that */
+@media (max-width: 450px) {
+  .mainMobileContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sizeMessage {
+    display: none;
+  }
+}

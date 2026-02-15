@@ -1,14 +1,271 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lab 4</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="custom.css" />
+  </head>
+  <body>
+    <div class="sizeMessage">
+      <p>
+        This page is designed to be viewed on a mobile device. Please switch to
+        a mobile device to view the content.
+      </p>
+    </div>
+    <div class="mainMobileContent">
+      <header>Mobile Web App - Made by Group 12</header>
+      <div class="landingPhoto">
+        <h1>Curl up & Dye</h1>
+        <!-- https://www.w3schools.com/bootstrap5/bootstrap_modal.php -->
+        <!-- Button to Open the Modal -->
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#myModal"
+        >
+          Book Now
+        </button>
 
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Booking Form</h4>
+                <button
+                  type="button"
+                  class="btn btn-close"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+              <!-- TODO: Booking Form in Modal format -->
+              <!-- Modal body -->
+              <div class="modal-body">Modal body..</div>
 
-</body>
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <hr class="border border-dark opacity-100 my-4" />
+        <h2>About Us</h2>
+        <p>
+          We are a hair salon that specializes in curly hair. We offer a variety
+          of services including haircuts, coloring, and styling. We also sell
+          hair products that are specifically designed for curly hair.
+        </p>
+      </div>
+      <!-- SERVICES -->
+      <div>
+        <hr class="border border-dark opacity-100 my-4" />
+        <h2>Service and Pricing</h2>
+        <!-- https://getbootstrap.com/docs/5.0/components/card/ -->
+        <!-- https://getbootstrap.com/docs/5.0/components/carousel/ -->
+        <div class="card service-card">
+          <div class="card-body">
+            <h5 class="card-title">Signature Color Services</h5>
+            <div
+              id="carouselColorServices"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="Images/Color/gloss.jpeg"
+                    class="d-block w-100"
+                    alt="Color Service 1"
+                  />
+                  <h6 class="fw-bold">The "Glow Up" Gloss</h6>
+                  <p class="card-text">
+                    A semi-permanent treatment to add shine and neutralize
+                    brassiness while sealing the cuticle.
+                  </p>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    Price: $65 – $90
+                  </h6>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="Images/Color/smudgeAndBlend.jpeg"
+                    class="d-block w-100"
+                    alt="Color Service 2"
+                  />
+                  <h6>Root Smudge & Blend</h6>
+                  <p class="card-text">
+                    Seamlessly blending regrowth for a lived-in look that lasts
+                    months.
+                  </p>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    Price: $120 – $160
+                  </h6>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="Images/Color/HydraColorMelt.jpeg"
+                    class="d-block w-100"
+                    alt="Color Service 3"
+                  />
+                  <h6>Hydra-Color Melt</h6>
+                  <p class="card-text">
+                    High-moisture permanent color transition from roots to ends.
+                  </p>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    Price: $110 – $180
+                  </h6>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselColorServices"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselColorServices"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <hr class="border border-dark opacity-0 my-4" />
+        <div class="card service-card">
+          <div class="card-body">
+            <h5 class="card-title">Hair Styling Services</h5>
+            <div
+              id="carouselStylingServices"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="Images/Styling/washAndSet.jpeg"
+                    class="d-block w-100"
+                    alt="Hair Styling Service 1"
+                  />
+                  <h6>The Signature Wash & Set</h6>
+                  <p class="card-text">
+                    Includes a detoxifying scalp scrub, deep hydration masque,
+                    and a finger-coiled or "rake and shake" definition style.
+                  </p>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    Price: $75 – $110
+                  </h6>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="Images/Styling/silkPress.jpeg"
+                    class="d-block w-100"
+                    alt="Hair Styling Service 2"
+                  />
+                  <h6>The "Crown" Silk Press</h6>
+                  <p class="card-text">
+                    For those who want a temporary straight look using high-heat
+                    protection and steam infusion to maintain curl elasticity.
+                  </p>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    Price: $95 – $140
+                  </h6>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="Images/Styling/curl.jpeg"
+                    class="d-block w-100"
+                    alt="Hair Styling Service 3"
+                  />
+                  <h6>Dry Curl Sculpting</h6>
+                  <p class="card-text">
+                    A dry-cut technique performed on natural curls to ensure the
+                    shape is perfect when the hair is worn down.
+                  </p>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    Price: $110 – $180
+                  </h6>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselStylingServices"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselStylingServices"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAP -->
+    <div class="card service-card">
+      <div class="card-body">
+        <hr class="border border-dark opacity-100 my-4" />
+        <h5>Map</h5>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.441086419714!2d-79.3809366845008!3d43.66548977912195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d9c5e7a9b7%3A0x8c8c8c8c8c8c8c8c!2sCurl%20up%20%26%20Dye%20Salon!5e0!3m2!1sen!2sca!4v1700000000000"
+          width="100%"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- TODO: Business Hours -->
+    <!-- TODO: Contact Information -->
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
