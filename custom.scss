@@ -1,68 +1,90 @@
-//https://getbootstrap.com/docs/5.0/customize/sass/
-// Custom.scss
-// Option A: Include all of Bootstrap
+// Source style file mirroring custom.css.
 
-// 2. YOUR VARIABLES (Must come BEFORE variables.scss)
-$primary: #30364f;
-$secondary: #acbac4;
-$warning: #e1d9bc;
-$light: #f0f0db;
-
-// Include any default variable overrides here (though functions won't be available)
-
-@import "node_modules/bootstrap/scss/bootstrap";
-
-// CUSTOM NORMAL CSS
-.mainMobileContent {
-  display: none;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
+:root {
+  --ink: #1f2933;
+  --muted: #6b7280;
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --accent: #1f6feb;
 }
-.sizeMessage {
-  display: block;
-  text-align: center;
-  font-size: 24px;
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
 }
-.landingPhoto {
-  width: 100%;
-  height: 400px;
-  background: url("Images/LandingPhoto.jpeg") no-repeat center center;
-  background-size: cover;
-  margin-top: 20px;
+
+.app-shell {
+  max-width: 880px;
+}
+
+.hero-simple {
+  min-height: 56vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
-}
-h1 {
-  background-color: white;
-}
-
-.card {
-  width: 100%;
-  height: 470px;
-}
-
-.carousel,
-.carousel-inner {
-  width: 100%;
+  color: #fff;
+  background-image: linear-gradient(
+      120deg,
+      rgba(16, 24, 40, 0.78),
+      rgba(16, 24, 40, 0.42)
+    ),
+    url("Images/LandingPhoto.jpeg");
+  background-size: cover;
+  background-position: center;
 }
 
-.carousel-item img {
-  width: 100%;
-  height: 220px;
+.hero-copy {
+  padding-top: 3.25rem;
+  padding-bottom: 3.25rem;
+}
+
+.hero-copy .lead,
+.hero-copy .small {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.hero-copy .btn-light {
+  font-weight: 700;
+}
+
+.option-image {
+  height: 160px;
   object-fit: cover;
 }
 
-/* We set the max width to 450px since most mobile devices are smaller than that */
-@media (max-width: 450px) {
-  .mainMobileContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .sizeMessage {
-    display: none;
+.option-card {
+  cursor: pointer;
+  border: 1px solid #dbe3ec;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.service-info-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option-card:hover,
+.option-card:focus-within,
+.option-card.selected {
+  border-color: var(--accent);
+  box-shadow: 0 0.4rem 0.9rem rgba(31, 111, 235, 0.12) !important;
+  transform: translateY(-1px);
+}
+
+.text-muted {
+  color: var(--muted) !important;
+}
+
+@media (min-width: 768px) {
+  .option-image {
+    height: 180px;
   }
 }
