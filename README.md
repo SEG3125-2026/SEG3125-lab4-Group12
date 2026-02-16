@@ -11,7 +11,7 @@
 | Member | Contribution |
 | --- | --- |
 | Alison Emilien (33%) | Created and implemented wireframe design; Created landing page and service selection cards  |
-| Ashley Woeldike (33%) |  |
+| Ashley Woeldike (33%) | Led design phase, creating initial concepts, producing wireframes, and sketching layout |
 | Quinn Jackson (33%) | Refined booking UX and flow, added the new hero section, and integrated stylist images with service descriptions. |
 
 ### Links
