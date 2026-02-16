@@ -291,7 +291,7 @@
               </div>
               <div class="col-12 col-md-6">
                 <label class="form-label" for="time">Time</label>
-                <select class="form-select" id="time" required>
+                <select class="form-select" id="time" required disabled>
                   <option value="" selected>Select a time slot</option>
                   <option>09:00 AM</option>
                   <option>10:00 AM</option>
@@ -487,23 +487,31 @@
         const name = nameInput.value.trim();
         const contact = contactInput.value.trim();
 
-        if (service || date || time) {
-          summary.textContent = `Service: ${service || "-"} | Staff: ${staff} | Date: ${date || "-"} | Time: ${time || "-"}`;
+        const hasDate = Boolean(date);
+        timeInput.disabled = !hasDate;
+        if (!hasDate && timeInput.value) {
+          timeInput.value = "";
+        }
+
+        const displayedTime = hasDate ? time : "";
+
+        if (service || date || displayedTime) {
+          summary.textContent = `Service: ${service || "-"} | Staff: ${staff} | Date: ${date || "-"} | Time: ${displayedTime || "-"}`;
         } else {
           summary.textContent = "No service/time selected yet.";
         }
 
         let step = 1;
         if (service) step = 2;
-        if (service && date && time) step = 3;
-        if (service && date && time && name && contact) step = 4;
+        if (service && date && displayedTime) step = 3;
+        if (service && date && displayedTime && name && contact) step = 4;
 
         const percentMap = { 1: 25, 2: 50, 3: 75, 4: 100 };
         progressBar.style.width = `${percentMap[step]}%`;
         progressBar.parentElement.setAttribute("aria-valuenow", String(percentMap[step]));
         progressText.textContent = `Step ${step} of 4`;
 
-        const readyToConfirm = Boolean(service && date && time && name && contact);
+        const readyToConfirm = Boolean(service && date && displayedTime && name && contact);
         submitBtn.classList.toggle("d-none", !readyToConfirm);
       }
 
