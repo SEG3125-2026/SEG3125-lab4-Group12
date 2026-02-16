@@ -12,7 +12,7 @@
 | --- | --- |
 | Alison Emilien (33%) | Created and implemented wireframe design; Created landing page and service selection cards  |
 | Ashley Woeldike (33%) |  |
-| Quinn Jackson (33%) |  | Refined booking UX and flow, new hero page, stylist images, descriptions |
+| Quinn Jackson (33%) | Refined booking UX and flow, added the new hero section, and integrated stylist images with service descriptions. |
 
 ### Links
 - **GitHub Repo:** https://github.com/SEG3125-2026/SEG3125-lab4-Group12
